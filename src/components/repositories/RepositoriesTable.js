@@ -1,19 +1,20 @@
 import { Link } from 'react-router-dom';
 
-function RepositoriesTable({ label, repositories, id }) {
-  const rendered = repositories &&
-    repositories.map((repo, i) => {
-      return (
-        <div key={repo.id} className="p-0.5">
-          <Link
-            className="text-blue-500"
-            to={`/repositories/${repo.full_name}`}
-          >
-            {repo.full_name}
-          </Link>
-        </div>
-      );
-    });
+    function RepositoriesTable({ label, repositories, id }) {
+      const rendered =
+        repositories &&
+        repositories.map((repo, i) => {
+          return (
+            <div key={repo.id} className="p-0.5">
+              <Link
+                className="text-blue-500"
+                to={`/repositories/${repo.full_name}`}
+              >
+                {repo.full_name}
+              </Link>
+            </div>
+          );
+        });
 
   return (
     <div className="border p-4 rounded">
